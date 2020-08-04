@@ -19,8 +19,8 @@
     if thread is running or sleeping it can be interrupted by other if thread running for long time and no method like sleep to check for interruptions we can check for 
     interruptions manually like this
     
-    if (Thread.interrupted()) {
+    ``if (Thread.interrupted()) {
     throw new InterruptedException();
-    }  
+    } `` 
     
       
