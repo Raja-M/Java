@@ -2,6 +2,6 @@
 
 ### Process and Thread
 
-    <B>Process :</B> 
+    * Process : 
     
-    <B>Thread : </B> 
+    * Thread : 
