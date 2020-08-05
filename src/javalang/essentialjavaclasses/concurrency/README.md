@@ -23,4 +23,37 @@
     throw new InterruptedException();
     } `` 
     
-      
+    When Synchronize method is called its acquires intrinsic lock for that methods object so that other sysnchronized methods of that object will not be accessed by other threads lock will be released as soon as method exits.
+  
+  Wait method pauses the current execution of the thread and thread execution resume if its interrupted by notify or notifyall mehods of other threads 
+  wait method throws interrupteException thread execution resume from the interruptException handler.''  
+  
+  
+  
+public class SynchronizedCounter {
+    private int c = 0;
+
+    public synchronized void increment() {
+        c++;
+    }
+
+    public synchronized void decrement() {
+        c--;
+    }
+
+    public synchronized int value() {
+        return c;
+    }
+}
+
+Interrupt set the internal interrupt status when thread is running for longtime and if we want to check any interrupts happened we can call
+Thread.interrupted to know that and this method will clear the interrupt status but if we want to know if a particular thread is interrupted 
+or not and using isInterrupted method then this method will not be resetting the interrupt flag.
+
+for (int i = 0; i < inputs.length; i++) {
+    heavyCrunch(inputs[i]);
+    if (Thread.interrupted()) {
+        // We've been interrupted: no more crunching.
+        return;
+ }
+ }
