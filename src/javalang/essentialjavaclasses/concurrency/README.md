@@ -4,7 +4,7 @@
 
     Process :  Self contained execution Environment.
     
-    Thread :   Thread exists within a process Provides execution envrionment.  Requires fewer resources. 
+    Thread :   Thread exists within a process Provides execution envrionment.  Requires fewer resources. Every Thread has its own Call stack.
     
     Thread class implements the Runnable and have run method but it does not do anything. Need to call the start() to run the run method.
     Thread class defines a number of other methods with are related to Thread managment.
