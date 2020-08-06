@@ -53,7 +53,7 @@ or not and using isInterrupted method then this method will not be resetting the
 for (int i = 0; i < inputs.length; i++) {
     heavyCrunch(inputs[i]);
     if (Thread.interrupted()) {
-        // We've been interrupted: no more crunching.
+        // We've been interrupted: no more crunching....
         return;
  }
  }
