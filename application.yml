@@ -1,1 +1,17 @@
+server:
+  port:  8080
+  context-path: /
+  error:
+    whitelabel:
+      enabled: false
+  max-http-header-size: 30000
 
+  
+spring:
+  application:
+      name: Cirrus cmdm
+      description: Application for retrieving memgroup data from Cirrus stream and integrate in cmdm
+  profiles: dev
+  datasource:
+      driverClassName: org.h2.Driver
+      url: jdbc:h2:mem:bne-kafka;MODE=MySQL
