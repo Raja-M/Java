@@ -1,4 +1,4 @@
-package om.optum.poc.poc.dependencypoc;
+package com.optum.poc.poc.dependencypoc;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

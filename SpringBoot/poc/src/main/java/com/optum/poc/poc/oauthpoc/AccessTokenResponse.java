@@ -1,4 +1,4 @@
-package om.optum.poc.poc.oauthpoc;
+package com.optum.poc.poc.oauthpoc;
 
 /**
 * The type Access token  response.
