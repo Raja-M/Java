@@ -8,7 +8,8 @@
 * aspectjrt
 * aspectjweaver
 
-
+--
+* lombok  // to remove getter and setters methods from class remove boilerplate code. // need to add exclude in mavin
 --
 
 
