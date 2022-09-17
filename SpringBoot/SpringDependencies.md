@@ -8,4 +8,10 @@
 * aspectjrt
 * aspectjweaver
 
-*
+
+--
+
+
+* spring-boot-starter-validation
+* spring-boot-starter-data-jpa
+* 
