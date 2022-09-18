@@ -1,14 +1,24 @@
 ## Annotations
 
+--
+* @Value("{welcome.message} ")
+   private String welcomeMessage;
+
+
+--
+
 * @Configuration
 * @ComponentScan(basePackages = "demo" ) 
 * @EnableAspectJAutoProxy
 --
 * @Component
 
-* @RestController
+* @RestController  @Controller
 * @Autowirted(@Qualify = "classname")
-* @GetMapping("/department/{id}") @PostMapping, @PutMapping , @DeleteMapping, @
+* @GetMapping("/department/{id}") 
+* @PostMapping, @PutMapping ,
+   publid Department saveDepartment(@Valid @RequestBody Department department)
+* @DeleteMapping, @
 * @RequestMapping( method = get ) -- old
 * @RequestBody  
 * @ResponseBody()
@@ -16,6 +26,14 @@
 * @Repository
 
 --
+* @ControllerAdvice
+* @ResponseStatus
+* @ExcceptionHandler( DepartmentNotFoundException.class)
+
+
+--
+
+
 --
 * @Aspect  // should be annotatated with @Component
     * @Pointcut("within(demo..*)" ) 
@@ -26,6 +44,8 @@
 --
 --
 * @Entity
+* @Data  // for lomboc @NoArgsConstructor, 
+* @Builder
 * @Id
 * @GeneratedValue(strategy = GenerationType.AUTO )
 * @NotBlank(message = "Please make sure field value is not empty )
@@ -34,5 +54,18 @@
           nativeQuery= true )
     Page<User> findByLastName( String lastname, Pageable pageable)
 
+--
+--
+* @MockBean
+   
+* @BeforeEach
+   
+* @Test
+* @DisplayName(" Get Data based on Valid Department name " )
+* @Disable  // disable the test case.
+* @DataJpaTest
 
+   
+   
+ 
 
