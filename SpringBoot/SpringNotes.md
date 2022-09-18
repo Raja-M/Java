@@ -44,6 +44,7 @@
 --
 --
 * @Entity
+* @Table( name= "tbl_student" )
 * @Data  // for lomboc @NoArgsConstructor, 
 * @Builder
 * @Id
@@ -64,6 +65,12 @@
 * @DisplayName(" Get Data based on Valid Department name " )
 * @Disable  // disable the test case.
 * @DataJpaTest
+   
+   
+ -- Acuttuator
+   
+ * @Endpoint( id = features) 
+   
 
    
    
