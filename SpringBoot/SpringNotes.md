@@ -45,10 +45,12 @@
 --
 * @Entity
 * @Table( name= "tbl_student" )
+
 * @Data  // for lomboc @NoArgsConstructor, 
 * @Builder
 * @Id
 * @GeneratedValue(strategy = GenerationType.AUTO )
+* @Column( name = "email_address" )
 * @NotBlank(message = "Please make sure field value is not empty )
 * @Query( value= "SELECT * FROM USERS WHERE LASTNAME = ?1",
           countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = ?1",
