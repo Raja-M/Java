@@ -85,6 +85,13 @@
       ) // repeat for each
       )
  }
+* ToString( exclude = "course" ) // on Entiy to support Lazy fetch)
+* @OneToOne ( cascade = cardType.ALL , fetch = FetchType = "LAZY" ) 
+* @JoinColumn(
+      name = "course_id"
+      referenceColumnName = "CourseId"
+  )
+ 
 
 --
 --
