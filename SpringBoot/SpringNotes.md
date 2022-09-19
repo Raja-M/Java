@@ -67,9 +67,15 @@
 * @Column( name = "email_address" , nullabl = false)
 * @NotBlank(message = "Please make sure field value is not empty )
 * @Query( value= "SELECT * FROM USERS WHERE LASTNAME = ?1",
-          countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = ?1",
+          countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = ?1",  // JQL uses entity names than table name ex: select s from student s where sid = ?1
           nativeQuery= true )
     Page<User> findByLastName( String lastname, Pageable pageable)
+* @Modifying
+* @Transactional
+* @Query( value= "SELECT * FROM USERS WHERE LASTNAME = :lname",
+          countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = :lname",  // JQL uses entity names than table name ex: select s from student s where sid = ?1
+          nativeQuery= true )
+    Page<User> findByLastName( @parm(lname) String lastname, Pageable pageable)
 * @Embeddable
 * @Embededd
 * @AttributeOverrides(){
