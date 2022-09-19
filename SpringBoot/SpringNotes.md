@@ -44,18 +44,41 @@
 --
 --
 * @Entity
-* @Table( name= "tbl_student" )
+* @Table( name= "tbl_student" 
+*         uniqueConstraints = @UniqueConstraint(
+*           name = "emailid_unique"
+*           columnNames = "email_address"
+*          )
+*       )
 
 * @Data  // for lomboc @NoArgsConstructor, 
 * @Builder
 * @Id
+
+* @SequenceGenerator(
+            name = "Student_seq",
+            sequenceName = "Student_seq",
+            allocationSize = 1 
+      )
 * @GeneratedValue(strategy = GenerationType.AUTO )
-* @Column( name = "email_address" )
+* @GeneratedValue(strategy = GenerationType.SEQUENCE
+                  generator = "student_sequence" )
+
+* @Column( name = "email_address" , nullabl = false)
 * @NotBlank(message = "Please make sure field value is not empty )
 * @Query( value= "SELECT * FROM USERS WHERE LASTNAME = ?1",
           countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = ?1",
           nativeQuery= true )
     Page<User> findByLastName( String lastname, Pageable pageable)
+* @Embeddable
+* @Embededd
+* @AttributeOverrides(){
+      @AttributeOverride(
+         name = "name"
+         column = @column( name= "guardian_name" )
+      ) // repeat for each
+      )
+ }
 
 --
 --
