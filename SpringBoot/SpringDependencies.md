@@ -22,4 +22,4 @@
 
 --
 * spring-boot-starter-actuator
-* 
+* spring-boot-devtools <plugin><excludeDevtools>false</excludeDevtools>
