@@ -8,6 +8,7 @@ public class ContentmanagerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ContentmanagerApplication.class, args);
+		System.out.println("Project started");
 	}
 
 }
