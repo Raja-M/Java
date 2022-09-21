@@ -1,6 +1,15 @@
-
+mvn life cycle methods.
+  clean
+  validate
+  compile
+  test
+  package
+  verify
+  install
+  site
+  deploy
 --
-
+  mvn spring-boot:run
   mvn clean install
   java jar spring-boot-tutorial-1.0.0.jar --spring.profiles.active=prod
   
@@ -22,4 +31,4 @@
 
 --
 * spring-boot-starter-actuator
-* 
+* spring-boot-devtools <plugin><excludeDevtools>false</excludeDevtools>
