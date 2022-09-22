@@ -12,7 +12,7 @@ import com.telanganainfo.contentmanager.repository.TinfoUserRepository;
 public class TinfoUserServiceImpl implements TinfoUserService {
 	
 	@Autowired
-	TinfoUserRepository tinfouserrepository;
+	private TinfoUserRepository tinfouserrepository;
 
 	@Override
 	public TinfoUser saveTinfoUser(TinfoUser tinfouser) {
@@ -24,6 +24,12 @@ public class TinfoUserServiceImpl implements TinfoUserService {
 	public List<TinfoUser> fetchTinfoUserList() {
 		// TODO Auto-generated method stub
 		return  tinfouserrepository.findAll();
+	}
+
+	@Override
+	public TinfoUser fetchTinfoUserById(Long userid) {
+		// TODO Auto-generated method stub
+		return  tinfouserrepository.findById(userid).get() ;
 	}
 	
 

@@ -11,4 +11,6 @@ public interface TinfoUserService {
 
 	public List<TinfoUser> fetchTinfoUserList();
 
+	public TinfoUser fetchTinfoUserById(Long userid);
+
 }
