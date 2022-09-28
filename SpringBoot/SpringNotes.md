@@ -71,7 +71,7 @@
           nativeQuery= true )
     Page<User> findByLastName( String lastname, Pageable pageable)
 * @Modifying
-* @Transactional
+* @Transactional  // 
 * @Query( value= "SELECT * FROM USERS WHERE LASTNAME = :lname",
           countQuery = 'SELECT COUNT(*) FROM USERS WHERE LASTNAME = :lname",  // JQL uses entity names than table name ex: select s from student s where sid = ?1
           nativeQuery= true )
@@ -91,6 +91,8 @@
       name = "course_id"
       referenceColumnName = "CourseId"
   )
+  
+* @Override
  
 
 --
@@ -108,7 +110,13 @@
  -- Acuttuator
    
  * @Endpoint( id = features) 
-   
+ 
+ --
+ * @EnableAsync
+ * 
+ ---
+ * @SupressWarnings("deprecation")
+ 
 
    
    

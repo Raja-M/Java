@@ -2,6 +2,8 @@ package com.telanganainfo.contentmanager.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -37,7 +39,7 @@ public class TinfoContentController {
 	}
 	
 	@PostMapping("/tinfocontent")
-	public  TinfoContent saveTinfoContent(@RequestBody TinfoContent tinfoContent ) {
+	public  TinfoContent saveTinfoContent(@Valid @RequestBody TinfoContent tinfoContent ) {
 		
 		return tinfoContentService.saveTinfoContent(tinfoContent);
 		
