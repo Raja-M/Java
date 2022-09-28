@@ -1,6 +1,6 @@
-package javalang.learn.basics;
+package javalang.learningthejavalanguage
 
-public class VarOperFlow {
+public class LanguageBasics {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
