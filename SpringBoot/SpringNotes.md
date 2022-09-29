@@ -17,7 +17,7 @@
 * @Autowirted(@Qualify = "classname")
 * @GetMapping("/department/{id}") 
 * @PostMapping, @PutMapping ,
-   publid Department saveDepartment(@Valid @RequestBody Department department)
+   public Department saveDepartment(@Valid @RequestBody Department department)
 * @DeleteMapping, @
 * @RequestMapping( method = get ) -- old
 * @RequestBody  

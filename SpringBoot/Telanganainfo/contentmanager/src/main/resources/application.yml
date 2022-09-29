@@ -24,7 +24,7 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-    
+  
 ---
 
 spring:
@@ -42,5 +42,4 @@ spring:
     hibernate.ddl-auto: update
     generate-ddl: true
     show-sql: true
-
-  
+ 

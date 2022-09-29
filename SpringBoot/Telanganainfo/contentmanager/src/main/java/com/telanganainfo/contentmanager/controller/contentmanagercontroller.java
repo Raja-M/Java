@@ -12,7 +12,7 @@ public class contentmanagercontroller {
 	}
 	@GetMapping( "/news")
 	public String news() {
-		return "Welcome to Telanganainfo.com news pages!";
+		return "Welcome to Telanganainfo.com website!";
 	}
 
 }

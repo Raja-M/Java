@@ -16,10 +16,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+/*
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+*/
 @Table( name= "tinfocontent")
 public class  TinfoContent {
 	
@@ -50,8 +52,7 @@ public class  TinfoContent {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	
-		
+			
 	public TinfoContent(Long contentid, @NotBlank(message = "Content Title cant be blank") String contenttitle,
 			String contentbody, int contenteditorid, int contentapproverid, String contentcreatetime,
 			String contentupdatetime, char contentstatus, String contentcity, String contentmandal, int contentplaceid,

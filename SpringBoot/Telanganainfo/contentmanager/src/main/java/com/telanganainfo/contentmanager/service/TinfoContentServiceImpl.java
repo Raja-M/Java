@@ -2,6 +2,7 @@ package com.telanganainfo.contentmanager.service;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,8 @@ import com.telanganainfo.contentmanager.repository.TinfoContentRepository;
 @Service
 public class TinfoContentServiceImpl implements TinfoContentService{
 
+		 
+		
 	
 	@Autowired
 	private TinfoContentRepository tinfoContentRepository;
@@ -29,7 +32,12 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 	@Override
 	public TinfoContent fetchTinfoContentById(Long contentId) {
 		// TODO Auto-generated method stub
-		return tinfoContentRepository.findById(contentId).get();
+		Optional<TinfoContent> tinfoContent = tinfoContentRepository.findById(contentId);
+		if (!tinfoContent.isPresent()) {
+			throw TinfoContentNotFoundException;
+			
+			
+		}
 	}
 
 	@Override
@@ -42,15 +50,8 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 	@Override
 	public TinfoContent updateTinfoCotent(Long contentId, TinfoContent tinfoContent) {
 		// TODO Auto-generated method stub
-		System.out.println( " tiContent.id :" + contentId );
-		Long id = 3L;
+ 
 		
-		System.out.println( " tiContent.id :" + id );
-		
-		//return tinfoContentRepository.findById(contentId).get();
-		
-		
-		System.out.println( " tiContent : "+  tinfoContentRepository.findById(id)) ;
 		
 		TinfoContent tiContent = tinfoContentRepository.findById(contentId).get();
 		
