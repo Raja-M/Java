@@ -8,13 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.telanganainfo.contentmanager.entity.TinfoContent;
+import com.telanganainfo.contentmanager.error.TinfoContentNotFoundException;
 import com.telanganainfo.contentmanager.repository.TinfoContentRepository;
 
 @Service
 public class TinfoContentServiceImpl implements TinfoContentService{
-
-		 
-		
 	
 	@Autowired
 	private TinfoContentRepository tinfoContentRepository;
@@ -27,17 +25,17 @@ public class TinfoContentServiceImpl implements TinfoContentService{
  
 		 return tc;
 	}
-	
 
 	@Override
-	public TinfoContent fetchTinfoContentById(Long contentId) {
+	public TinfoContent fetchTinfoContentByContentId(Long contentId) throws TinfoContentNotFoundException {
 		// TODO Auto-generated method stub
 		Optional<TinfoContent> tinfoContent = tinfoContentRepository.findById(contentId);
 		if (!tinfoContent.isPresent()) {
-			throw TinfoContentNotFoundException;
+			throw  new TinfoContentNotFoundException("TinfoContent Not Found");
 			
 			
 		}
+		return tinfoContent.get();
 	}
 
 	@Override
@@ -45,13 +43,10 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 		// TODO Auto-generated method stub
 		return  tinfoContentRepository.save(tinfoContent);
 	}
-
-
+	
 	@Override
 	public TinfoContent updateTinfoCotent(Long contentId, TinfoContent tinfoContent) {
-		// TODO Auto-generated method stub
- 
-		
+		// TODO Auto-generated method stub		
 		
 		TinfoContent tiContent = tinfoContentRepository.findById(contentId).get();
 		
@@ -114,10 +109,8 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 			}
 		
 		return  tinfoContentRepository.save(tiContent);
-	
 		
 	}
-
 
 	@Override
 	public String deleteTinfoCotent(Long contentId) {
@@ -125,8 +118,11 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 		  tinfoContentRepository.deleteById(contentId); 
 		  return "contentId : " + contentId + " Deleted Successfully." ;
 	}
- 
-	
-	
 
+	@Override
+	public TinfoContent fetchTinfoContentByContentTitle(String contentTitle) {
+		// TODO Auto-generated method stub
+		System.out.println("Content Titile : " + contentTitle);
+		return tinfoContentRepository.findByContenttitleIgnoreCase(contentTitle);
+	}
 }

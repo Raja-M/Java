@@ -1,12 +1,12 @@
-com\telanganainfo\contentmanager\entity\TinfoContent.class
 com\telanganainfo\contentmanager\repository\TinfoContentRepository.class
-com\telanganainfo\contentmanager\controller\TinfoContentController.class
 com\telanganainfo\contentmanager\service\TinfoUserService.class
 com\telanganainfo\contentmanager\repository\TinfoUserRepository.class
 com\telanganainfo\contentmanager\service\TinfoUserServiceImpl.class
+com\telanganainfo\contentmanager\entity\TinfoUser.class
+com\telanganainfo\contentmanager\service\TinfoContentServiceImpl.class
+com\telanganainfo\contentmanager\entity\TinfoContent.class
+com\telanganainfo\contentmanager\controller\TinfoContentController.class
 com\telanganainfo\contentmanager\ContentmanagerApplication.class
 com\telanganainfo\contentmanager\controller\TinfoUserController.class
-com\telanganainfo\contentmanager\entity\TinfoUser.class
 com\telanganainfo\contentmanager\controller\contentmanagercontroller.class
 com\telanganainfo\contentmanager\service\TinfoContentService.class
-com\telanganainfo\contentmanager\service\TinfoContentServiceImpl.class

@@ -7,5 +7,8 @@ import com.telanganainfo.contentmanager.entity.TinfoContent;
 
 @Repository
 public interface TinfoContentRepository  extends JpaRepository<TinfoContent, Long>{
-
+	
+	public TinfoContent findByContenttitle(String contentTitle);
+	
+	public TinfoContent findByContenttitleIgnoreCase(String contentTitle);
 }

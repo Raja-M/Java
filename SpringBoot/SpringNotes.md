@@ -28,7 +28,7 @@
 --
 * @ControllerAdvice
 * @ResponseStatus
-* @ExcceptionHandler( DepartmentNotFoundException.class)
+* @ExceptionHandler( DepartmentNotFoundException.class)
 
 
 --
@@ -99,7 +99,7 @@
 --
 * @MockBean
    
-* @BeforeEach
+* @BeforeEach  @BeforeAll
    
 * @Test
 * @DisplayName(" Get Data based on Valid Department name " )
@@ -116,6 +116,11 @@
  * 
  ---
  * @SupressWarnings("deprecation")
+ 
+ ---
+ * @SpringBootTest
+ * @BeforeEach
+ & @Test
  
 
    
