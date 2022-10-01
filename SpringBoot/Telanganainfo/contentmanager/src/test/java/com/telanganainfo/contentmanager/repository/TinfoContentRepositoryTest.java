@@ -7,11 +7,44 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import com.telanganainfo.contentmanager.entity.TinfoContent;
 
+
+
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
+class TinfoContentRepositoryTest {
+	@Autowired
+	private TinfoContentRepository tinfocontentrepository;
+	
+	@Autowired
+	private TestEntityManager entityManager;
+	
+
+	@BeforeEach
+	void setup() {
+		
+		TinfoContent tinfoContent = new TinfoContent();
+//		tinfoContent.setContentid(30L);
+		tinfoContent.setContenttitle("TestRepo Content Title");
+		
+		entityManager.persist(tinfoContent);
+		
+	}
+	
+	@Test
+	public void whenFindById_thenReturnTinfoContent() {
+		TinfoContent tinfoContent = tinfocontentrepository.findByContenttitleIgnoreCase( "TestRepo Content Title");
+		assertEquals( tinfoContent.getContenttitle(), "TestRepo Content Title");
+	}
+	
+}
+/*
 @DataJpaTest
 class TinfoContentRepositoryTest {
 	
@@ -34,8 +67,12 @@ class TinfoContentRepositoryTest {
 	}
 	@Test
 	public void whenFindById_thenReturnTinfoContent() {
+		assertEquals( 1, 1);
+		/*
 		TinfoContent tinfoContent = tinfocontentrepository.findById(20L).get();
 		assertEquals( tinfoContent.getContenttitle(), "TestRepo Content Title");
+		
 	}
 	
 }
+*/
