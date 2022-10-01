@@ -25,8 +25,9 @@ import lombok.NoArgsConstructor;
 @Table( name= "tinfocontent")
 public class  TinfoContent {
 	
+
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long contentid;
 	@NotBlank(message="Content Title cant be blank")
 	private String contenttitle;
@@ -147,6 +148,13 @@ public class  TinfoContent {
 	}
 	
 	
-	
+	@Override
+	public String toString() {
+		return "TinfoContent [contentid=" + contentid + ", contenttitle=" + contenttitle + ", contentbody="
+				+ contentbody + ", contenteditorid=" + contenteditorid + ", contentapproverid=" + contentapproverid
+				+ ", contentcreatetime=" + contentcreatetime + ", contentupdatetime=" + contentupdatetime
+				+ ", contentstatus=" + contentstatus + ", contentcity=" + contentcity + ", contentmandal="
+				+ contentmandal + ", contentplaceid=" + contentplaceid + ", contentpicurl=" + contentpicurl + "]";
+	}
 	
 }

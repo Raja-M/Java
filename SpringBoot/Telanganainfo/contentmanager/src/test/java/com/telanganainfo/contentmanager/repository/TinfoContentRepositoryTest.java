@@ -30,7 +30,7 @@ class TinfoContentRepositoryTest {
 	void setup() {
 		
 		TinfoContent tinfoContent = new TinfoContent();
-//		tinfoContent.setContentid(30L);
+		tinfoContent.setContentid(30L);
 		tinfoContent.setContenttitle("TestRepo Content Title");
 		
 		entityManager.persist(tinfoContent);
@@ -39,7 +39,10 @@ class TinfoContentRepositoryTest {
 	
 	@Test
 	public void whenFindById_thenReturnTinfoContent() {
-		TinfoContent tinfoContent = tinfocontentrepository.findByContenttitleIgnoreCase( "TestRepo Content Title");
+		TinfoContent tinfoContent = tinfocontentrepository.findById(30L).get();
+
+ //		TinfoContent tinfoContent = tinfocontentrepository.findByContenttitleIgnoreCase( "TestRepo Content Title");
+ 		System.out.println(" ID : " + tinfoContent.getContentid());
 		assertEquals( tinfoContent.getContenttitle(), "TestRepo Content Title");
 	}
 	

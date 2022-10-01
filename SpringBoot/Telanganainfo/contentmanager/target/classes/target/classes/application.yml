@@ -1,11 +1,8 @@
-
-
 spring:
  profiles:
    active: local
 
 ---
-
 spring:
   config:
     activate:
@@ -24,11 +21,20 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
-  logging:
-    level:
-      ROOT: WARN 
----
+management:
+  endpoints:
+    web: 
+     exposure:
+       include: "*"
 
+logging:
+  level:
+    ROOT: WARN
+
+welcome:
+  message: Telanganainfo ContentManager Service started
+
+---
 spring:
   config:
     activate:

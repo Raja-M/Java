@@ -122,7 +122,10 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 	@Override
 	public TinfoContent fetchTinfoContentByContentTitle(String contentTitle) {
 		// TODO Auto-generated method stub
-		System.out.println("Content Titile : " + contentTitle);
-		return tinfoContentRepository.findByContenttitleIgnoreCase(contentTitle);
+		
+		TinfoContent tinfoContent = tinfoContentRepository.findByContenttitleIgnoreCase(contentTitle);
+//		System.out.println( " Content : " + tinfoContent.toString()) ;
+		
+		return tinfoContent;
 	}
 }

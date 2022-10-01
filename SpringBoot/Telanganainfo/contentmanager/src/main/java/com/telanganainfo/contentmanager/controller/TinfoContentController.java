@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,6 +25,10 @@ import com.telanganainfo.contentmanager.service.TinfoContentService;
 @RestController
 public class TinfoContentController {
 	
+	@Value("${welcome.message}")
+	private String welcomeMessage;
+	
+	
 	@Autowired
 	private TinfoContentService tinfoContentService;
 	
@@ -32,6 +37,8 @@ public class TinfoContentController {
 	
 	@GetMapping("/tinfocontent")
 	public List<TinfoContent> fetchTinfoContent( ) {
+		
+		System.out.println( "Welcome message : " + welcomeMessage);
 		
 		 List<TinfoContent> tc = tinfoContentService.fetchTinfoContentList();
 		 
