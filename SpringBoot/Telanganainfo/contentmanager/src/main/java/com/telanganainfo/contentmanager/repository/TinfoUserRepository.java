@@ -8,5 +8,7 @@ import com.telanganainfo.contentmanager.entity.TinfoUser;
 @Repository
 public interface TinfoUserRepository extends JpaRepository<TinfoUser, Long>{
 	
-
+	public TinfoUser findByUserfirstname(String userfirstname); 
+	
+	public TinfoUser findByUserfirstnameIgnoreCase(String userfirstname); 
 }

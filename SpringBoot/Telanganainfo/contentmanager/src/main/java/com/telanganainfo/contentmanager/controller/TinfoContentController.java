@@ -81,11 +81,5 @@ public class TinfoContentController {
 		LOGGER.error("deleting TinfoContent..... !!");		 
 		return tinfoContentService.deleteTinfoCotent(contentId );
 		 
-	}
-		 
-		 
-		 
-	
-	
-	 
+	}	 
 }

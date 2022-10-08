@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +39,9 @@ class TinfoContentRepositoryTest {
 	}
 	
 	@Test
+//	@Disabled
 	public void whenFindById_thenReturnTinfoContent() {
+		System.out.println(" In whenFindById_thenReturnTinfoContent " );
 		TinfoContent tinfoContent = tinfocontentrepository.findById(30L).get();
 
  //		TinfoContent tinfoContent = tinfocontentrepository.findByContenttitleIgnoreCase( "TestRepo Content Title");

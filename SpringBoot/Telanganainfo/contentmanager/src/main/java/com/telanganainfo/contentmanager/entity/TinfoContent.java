@@ -27,7 +27,7 @@ public class  TinfoContent {
 	
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long contentid;
 	@NotBlank(message="Content Title cant be blank")
 	private String contenttitle;
@@ -44,6 +44,7 @@ public class  TinfoContent {
 	private String contentmandal;
 	private int contentplaceid;
 	private String contentpicurl;
+	private int categorytid;
 	
 	
 	
@@ -57,7 +58,7 @@ public class  TinfoContent {
 	public TinfoContent(Long contentid, @NotBlank(message = "Content Title cant be blank") String contenttitle,
 			String contentbody, int contenteditorid, int contentapproverid, String contentcreatetime,
 			String contentupdatetime, char contentstatus, String contentcity, String contentmandal, int contentplaceid,
-			String contentpicurl) {
+			String contentpicurl, int categorytid) {
 		super();
 		this.contentid = contentid;
 		this.contenttitle = contenttitle;
@@ -71,6 +72,7 @@ public class  TinfoContent {
 		this.contentmandal = contentmandal;
 		this.contentplaceid = contentplaceid;
 		this.contentpicurl = contentpicurl;
+		this.categorytid = categorytid;
 	}
 
 
@@ -146,6 +148,14 @@ public class  TinfoContent {
 	public void setContentpicurl(String contentpicurl) {
 		this.contentpicurl = contentpicurl;
 	}
+	public int getCategorytid() {
+		return categorytid;
+	}
+	public void setCategorytid(int categorytid) {
+		this.categorytid = categorytid;
+	}
+	
+	
 	
 	
 	@Override
