@@ -20,8 +20,7 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 	@Override
 	public List<TinfoContent> fetchTinfoContentList() {
 		// TODO Auto-generated method stub
-		List<TinfoContent> tc = tinfoContentRepository.findAll();
-		
+		List<TinfoContent> tc = tinfoContentRepository.findAll();		
  
 		 return tc;
 	}
@@ -65,7 +64,7 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 				!"".equalsIgnoreCase( tinfoContent.getContentbody()  )) {
 				tiContent.setContentbody( tinfoContent.getContentbody());
 			}
-		
+		/*
 		if(Objects.nonNull( tinfoContent.getContenteditorid() )&& 
 				(tinfoContent.getContenteditorid() > 0 )) {
 				tiContent.setContenteditorid( tinfoContent.getContenteditorid());
@@ -75,7 +74,7 @@ public class TinfoContentServiceImpl implements TinfoContentService{
 				(tinfoContent.getContentapproverid() > 0 )) {
 				tiContent.setContentapproverid( tinfoContent.getContentapproverid());
 			}
-		
+		*/
 		tiContent.setContentcreatetime( tinfoContent.getContentcreatetime());
 		
 		if(Objects.nonNull( tinfoContent.getContentupdatetime() )&& 

@@ -1,14 +1,27 @@
 package com.telanganainfo.contentmanager.entity;
 
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
-@Table( name= "tinfouser")
+@Table(name = "tinfouser")
 public class TinfoUser {
-	
+
 	@Id
+	@SequenceGenerator(
+				name = "tinfouser_sequence",
+				sequenceName = "tinfouser_sequence",
+				allocationSize = 1
+			)
+	@GeneratedValue(
+				strategy = GenerationType.SEQUENCE,
+				generator = "tinfouser_sequence"
+			)
 	private Long userid;
 	private String userfirstname;
 	private String userlastname;
@@ -16,30 +29,52 @@ public class TinfoUser {
 	private String usercreatetime;
 	private String usermodifiedtime;
 	private String userstatus;
-	private String useremail;
-	private int userphonecountrycode;
-	private int userphone;
-	private int useralternatephone;
-	private String useraddresshousenumber;
-	private String useraddressstreet;
-	private String useraddressaptorsuiteno;
-	private String usercity;
-	private String userstate;
-	private String usercountry;
-	private String userzipcode;
+
+
+
+	@Embedded
+	private TinfoUserContact tinfoUserContact;
+	/*
+	@OneToMany(
+			cascade = CascadeType.ALL,
+			fetch = FetchType.LAZY
+//			optional = false   // this works only for onetoone relationship only.
+			
+			)
+	@JoinColumn(
+			name = "contenteditorid",
+			referencedColumnName = "userid"
+			)
+	@JoinColumn(
+			name = "contentapproverid",
+			referencedColumnName = "userid"
+			)
+	private List<TinfoContent> tinfoContents;
+	*/
+	/* Example of By directional one to one mapping 
+	 * removed content editor and content approver from to string of tinfocontent because of circular reference and stackoverflow.
+	 * As Tinfouser user id is foreign key in the tinfocontent table
+	 * to get all the content referenced by userid  we can use mapped by foreign key field
+	 * commented since we are changing the relation ship from tinfouser -> tinfocontent from one to one to One to many.
+	 
+	@OneToOne(
+			mappedBy = "contenteditor"
+			)
+	private TinfoContent tinfoContent1;
 	
+	@OneToOne(
+			mappedBy = "contentapprover"
+			)
+	private TinfoContent tinfoContent2;
 	
-	
-	
-	
+	*/
 	public TinfoUser() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
 	public TinfoUser(Long userid, String userfirstname, String userlastname, String userrole, String usercreatetime,
-			String usermodifiedtime, String userstatus, String useremail, int userphonecountrycode, int userphone,
-			int useralternatephone, String useraddresshousenumber, String useraddressstreet,
-			String useraddressaptorsuiteno, String usercity, String userstate, String usercountry, String userzipcode) {
+			String usermodifiedtime, String userstatus, TinfoUserContact tinfoUserContact) {
 		super();
 		this.userid = userid;
 		this.userfirstname = userfirstname;
@@ -48,42 +83,41 @@ public class TinfoUser {
 		this.usercreatetime = usercreatetime;
 		this.usermodifiedtime = usermodifiedtime;
 		this.userstatus = userstatus;
-		this.useremail = useremail;
-		this.userphonecountrycode = userphonecountrycode;
-		this.userphone = userphone;
-		this.useralternatephone = useralternatephone;
-		this.useraddresshousenumber = useraddresshousenumber;
-		this.useraddressstreet = useraddressstreet;
-		this.useraddressaptorsuiteno = useraddressaptorsuiteno;
-		this.usercity = usercity;
-		this.userstate = userstate;
-		this.usercountry = usercountry;
-		this.userzipcode = userzipcode;
+		this.tinfoUserContact = tinfoUserContact;
 	}
+
 	public Long getUserid() {
 		return userid;
 	}
+
 	public void setUserid(Long userid) {
 		this.userid = userid;
 	}
+
 	public String getUserfirstname() {
 		return userfirstname;
 	}
+
 	public void setUserfirstname(String userfirstname) {
 		this.userfirstname = userfirstname;
 	}
+
 	public String getUserlastname() {
 		return userlastname;
 	}
+
 	public void setUserlastname(String userlastname) {
 		this.userlastname = userlastname;
 	}
+
 	public String getUserrole() {
 		return userrole;
 	}
+
 	public void setUserrole(String userrole) {
 		this.userrole = userrole;
 	}
+
 	public String getUsercreatetime() {
 		return usercreatetime;
 	}
@@ -102,86 +136,16 @@ public class TinfoUser {
 	public void setUserstatus(String userstatus) {
 		this.userstatus = userstatus;
 	}
-	public String getUseremail() {
-		return useremail;
+	public TinfoUserContact getTinfoUserContact() {
+		return tinfoUserContact;
 	}
-	public void setUseremail(String useremail) {
-		this.useremail = useremail;
+	public void setTinfoUserContact(TinfoUserContact tinfoUserContact) {
+		this.tinfoUserContact = tinfoUserContact;
 	}
-	public int getUserphonecountrycode() {
-		return userphonecountrycode;
-	}
-	public void setUserphonecountrycode(int userphonecountrycode) {
-		this.userphonecountrycode = userphonecountrycode;
-	}
-	public int getUserphone() {
-		return userphone;
-	}
-	public void setUserphone(int userphone) {
-		this.userphone = userphone;
-	}
-	public int getUseralternatephone() {
-		return useralternatephone;
-	}
-	public void setUseralternatephone(int useralternatephone) {
-		this.useralternatephone = useralternatephone;
-	}
-	public String getUseraddresshousenumber() {
-		return useraddresshousenumber;
-	}
-	public void setUseraddresshousenumber(String useraddresshousenumber) {
-		this.useraddresshousenumber = useraddresshousenumber;
-	}
-	public String getUseraddressstreet() {
-		return useraddressstreet;
-	}
-	public void setUseraddressstreet(String useraddressstreet) {
-		this.useraddressstreet = useraddressstreet;
-	}
-	public String getUseraddressaptorsuiteno() {
-		return useraddressaptorsuiteno;
-	}
-	public void setUseraddressaptorsuiteno(String useraddressaptorsuiteno) {
-		this.useraddressaptorsuiteno = useraddressaptorsuiteno;
-	}
-	public String getUsercity() {
-		return usercity;
-	}
-	public void setUsercity(String usercity) {
-		this.usercity = usercity;
-	}
-	public String getUserstate() {
-		return userstate;
-	}
-	public void setUserstate(String userstate) {
-		this.userstate = userstate;
-	}
-	public String getUsercountry() {
-		return usercountry;
-	}
-	public void setUsercountry(String usercountry) {
-		this.usercountry = usercountry;
-	}
-	public String getUserzipcode() {
-		return userzipcode;
-	}
-	public void setUserzipcode(String userzipcode) {
-		this.userzipcode = userzipcode;
-	}
-	
 	@Override
 	public String toString() {
 		return "TinfoUser [userid=" + userid + ", userfirstname=" + userfirstname + ", userlastname=" + userlastname
 				+ ", userrole=" + userrole + ", usercreatetime=" + usercreatetime + ", usermodifiedtime="
-				+ usermodifiedtime + ", userstatus=" + userstatus + ", useremail=" + useremail
-				+ ", userphonecountrycode=" + userphonecountrycode + ", userphone=" + userphone
-				+ ", useralternatephone=" + useralternatephone + ", useraddresshousenumber=" + useraddresshousenumber
-				+ ", useraddressstreet=" + useraddressstreet + ", useraddressaptorsuiteno=" + useraddressaptorsuiteno
-				+ ", usercity=" + usercity + ", userstate=" + userstate + ", usercountry=" + usercountry
-				+ ", userzipcode=" + userzipcode + "]";
+				+ usermodifiedtime + ", userstatus=" + userstatus + ", tinfoUserContact=" + tinfoUserContact + "]";
 	}
-	
-	
-	
-	
 }

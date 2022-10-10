@@ -50,13 +50,13 @@ public class TinfoUserController {
 	public TinfoUser updateTinfoUser( @PathVariable("userid") Long userid,  @RequestBody TinfoUser tinfouser ) {
 		
 		return tinfouserservice.updateTinfoUser(userid, tinfouser); 
-	}
-	
+	}	
 	
 	@DeleteMapping("/tinfouser/{id}")
 	public String deleteTinfoUserById(@PathVariable("id") Long userid) {
 		
 		return   tinfouserservice.deleteTinfoUser( userid ); 
 	}
+	
 	
 }
