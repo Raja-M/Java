@@ -37,8 +37,7 @@ public class TinfoUserController {
 	public TinfoUser getTinfoUserByUserfirstname(@PathVariable("userfirstname") String userfirstname) {
 		
 		return   tinfouserservice.fetchTinfoUserByUserfirstname(userfirstname); 
-	}
-	
+	}	
 
 	@PostMapping("/tinfouser")
 	public TinfoUser saveTinfoUser(@RequestBody TinfoUser tinfouser ) {
