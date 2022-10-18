@@ -11,5 +11,5 @@ public interface TinfoUserVerificationTokenRepository extends
 
  
 
-	TinfoUserVerificationToken findByUserToken(String token);
+	TinfoUserVerificationToken findByUsertoken(String token);
 }

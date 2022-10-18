@@ -25,7 +25,7 @@ public class TinfoUserVerificationToken {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String userToken;
+	private String usertoken;
 
 	private Date expirationTime;
 
@@ -41,7 +41,7 @@ public class TinfoUserVerificationToken {
 	}
 	public TinfoUserVerificationToken( TinfoUser user, String userToken) {
 		super();
-		this.userToken = userToken;
+		this.usertoken = userToken;
 		this.user = user;
 		this.expirationTime = calculateExpirationDate( EXPIRATION_TIME);
 		
@@ -49,7 +49,7 @@ public class TinfoUserVerificationToken {
 	
 	public TinfoUserVerificationToken(  String userToken) {
 		super();
-		this.userToken = userToken;
+		this.usertoken = userToken;
 		this.expirationTime = calculateExpirationDate( EXPIRATION_TIME);
 		
 	}
@@ -73,11 +73,11 @@ public class TinfoUserVerificationToken {
 	}
 
 	public String getUserToken() {
-		return userToken;
+		return usertoken;
 	}
 
-	public void setUserToken(String userToken) {
-		this.userToken = userToken;
+	public void setUserToken(String usertoken) {
+		this.usertoken = usertoken;
 	}
 
 	public Date getExpirationTime() {

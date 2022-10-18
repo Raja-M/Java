@@ -14,7 +14,7 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "tinfouserpasswordresttoken")
+@Table(name = "tinfouserpasswordresettoken")
 public class TinfoUserPasswordResetToken {
 
 	// Expiration time
@@ -24,14 +24,14 @@ public class TinfoUserPasswordResetToken {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	private String userToken;
+	private String usertoken;
 
 	private Date expirationTime;
 
 	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "userid", 
 				nullable = false, 
-				foreignKey = @ForeignKey(name = "FK_USER_PASWORD_USERTOKEN"))
+				foreignKey = @ForeignKey(name = "FK_USER_PASSWORD_USERTOKEN"))
 	private TinfoUser user;
 
 	public TinfoUserPasswordResetToken() {
@@ -41,7 +41,7 @@ public class TinfoUserPasswordResetToken {
 
 	public TinfoUserPasswordResetToken( TinfoUser user, String userToken) {
 			super();
-			this.userToken = userToken;
+			this.usertoken = userToken;
 			this.user = user;
 			this.expirationTime = calculateExpirationDate( EXPIRATION_TIME);
 			
@@ -49,7 +49,7 @@ public class TinfoUserPasswordResetToken {
 
 	public TinfoUserPasswordResetToken(  String userToken) {
 			super();
-			this.userToken = userToken;
+			this.usertoken = userToken;
 			this.expirationTime = calculateExpirationDate( EXPIRATION_TIME);
 			
 		}
@@ -72,12 +72,12 @@ public class TinfoUserPasswordResetToken {
 		this.id = id;
 	}
 
-	public String getUserToken() {
-		return userToken;
+	public String getUsertoken() {
+		return usertoken;
 	}
 
 	public void setUserToken(String userToken) {
-		this.userToken = userToken;
+		this.usertoken = userToken;
 	}
 
 	public Date getExpirationTime() {

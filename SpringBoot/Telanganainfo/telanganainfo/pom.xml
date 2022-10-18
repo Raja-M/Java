@@ -14,6 +14,8 @@
 	<modules>
 		<module>contentmanagersecurity</module>
 		<module>contentmanagersharedlib</module>
+		<module>contentmanageroauthauthorizationserver</module>
+		<module>contentmanagerresourceserver</module>
 	</modules>
 
 </project>

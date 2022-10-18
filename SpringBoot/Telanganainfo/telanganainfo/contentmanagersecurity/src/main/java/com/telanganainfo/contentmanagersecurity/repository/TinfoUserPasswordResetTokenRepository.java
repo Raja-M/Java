@@ -9,5 +9,7 @@ import com.telanganainfo.contentmanagersecurity.entity.TinfoUserPasswordResetTok
 public interface TinfoUserPasswordResetTokenRepository extends 
 JpaRepository<TinfoUserPasswordResetToken, Long> {
 
+	TinfoUserPasswordResetToken findByUsertoken(String token);
+
 
 }

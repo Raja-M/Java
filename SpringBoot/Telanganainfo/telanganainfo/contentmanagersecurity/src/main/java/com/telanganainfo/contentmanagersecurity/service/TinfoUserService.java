@@ -2,6 +2,7 @@ package com.telanganainfo.contentmanagersecurity.service;
 
 import java.util.List;
 
+
 import com.telanganainfo.contentmanagersecurity.entity.TinfoUser;
 import com.telanganainfo.contentmanagersecurity.entity.TinfoUserVerificationToken;
 import com.telanganainfo.contentmanagersecurity.model.TinfoUserModel;
@@ -44,6 +45,19 @@ public interface TinfoUserService {
 	public void createPasswordRestTokenForUser(TinfoUser user, String token);
 
 	public TinfoUser findByUseremail(String email);
+
+	public String validatePasswordResetToken(String token);
+
+	public java.util.Optional<TinfoUser> getByTinfoUserPasswordResetToken(String token);
+
+	public void changePassword(TinfoUser tinfoUser, String newpassword);
+
+	public boolean checkIfValidOldPassword(TinfoUser user, String oldpassword);
+	
+	
+	
+	
+	
 
 	 
 	
