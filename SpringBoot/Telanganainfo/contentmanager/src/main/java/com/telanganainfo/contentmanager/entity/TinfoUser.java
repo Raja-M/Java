@@ -80,7 +80,7 @@ public class TinfoUser {
 		this.userfirstname = userfirstname;
 		this.userlastname = userlastname;
 		this.userrole = userrole;
-		this.usercreatetime = usercreatetime;
+		this.usercreatetime = usercreatetime; 	
 		this.usermodifiedtime = usermodifiedtime;
 		this.userstatus = userstatus;
 		this.tinfoUserContact = tinfoUserContact;
@@ -149,3 +149,4 @@ public class TinfoUser {
 				+ usermodifiedtime + ", userstatus=" + userstatus + ", tinfoUserContact=" + tinfoUserContact + "]";
 	}
 }
+
