@@ -1,0 +1,12 @@
+import
+
+public class CollectionsCode{
+
+    public static void main ( String[] args) {
+
+        System.out.println( " Collection frame work " ) ;
+
+
+    }
+
+}

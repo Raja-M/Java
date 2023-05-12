@@ -15,5 +15,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="javalang/Collections/CollectionsCode"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
