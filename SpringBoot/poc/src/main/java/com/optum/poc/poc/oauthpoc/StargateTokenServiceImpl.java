@@ -28,7 +28,7 @@ public class StargateTokenServiceImpl {
 		
 		StringBuilder requestBody = new StringBuilder();
 		
-		requestBody.append("client_id=S2q1BwYxyCqJr8UIoA35OVrY39xwFA0V&client_secret=K8vh5vG6PtevScjPPuoxxhNE0qr7IKuN&grant_type=client_credentials");
+		requestBody.append("******");
 //	    return requestBody.toString();
 
 		
