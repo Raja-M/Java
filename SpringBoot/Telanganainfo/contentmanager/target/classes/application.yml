@@ -33,7 +33,7 @@ logging:
     ROOT: WARN
 
 welcome:
-  message: Telanganainfo ContentManager Service started
+  message: ${WEL_MESSAGE:Telanganainfo ContentManager Service started}
 
 ---
 spring:

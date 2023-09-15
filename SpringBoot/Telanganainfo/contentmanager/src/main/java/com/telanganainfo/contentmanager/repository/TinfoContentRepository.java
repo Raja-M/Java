@@ -16,5 +16,7 @@ public interface TinfoContentRepository  extends JpaRepository<TinfoContent, Lon
 	public TinfoContent findByContenttitleIgnoreCase(String contentTitle);
 	
 	public Page<TinfoContent> findByContenttitleContaining(String contentTitle, Pageable pageable);
+
+
 	
 }

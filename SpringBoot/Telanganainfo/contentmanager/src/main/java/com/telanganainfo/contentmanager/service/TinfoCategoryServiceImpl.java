@@ -7,7 +7,7 @@ import com.telanganainfo.contentmanager.entity.TinfoCategory;
 import com.telanganainfo.contentmanager.repository.TinfoCategoryRepository;
 
 @Service
-public class TinfoCategoryImpl implements TinfoCategoryService {
+public class TinfoCategoryServiceImpl implements TinfoCategoryService {
 	
 	@Autowired
 	private TinfoCategoryRepository tinfoCategoryRepository;

@@ -14,8 +14,5 @@ public class CollectionsCode {
         List< Integer > list = strm.collect(Collectors.toList() );
         ArrayList< Integer > arrayList = new ArrayList<>(list);
         // System.out.println(" Array List : " + arrayList);
-
-
-
     }
 }

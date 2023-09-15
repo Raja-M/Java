@@ -10,11 +10,7 @@
 	<classpathentry kind="src" path="javalang/GettingStarted"/>
 	<classpathentry excluding="Collections/|DataBase/|DateTimeApi/|Deployment/|essentialjavaclasses/|LearningtheJavaLanguage/|GettingStarted/|LeetCode/" kind="src" path="javalang"/>
 	<classpathentry excluding="javalang/Collections/|javalang/DataBase/|javalang/DateTimeApi/|javalang/Deployment/|javalang/essentialjavaclasses/|javalang/LearningtheJavaLanguage/|javalang/GettingStarted/|javalang/|javalang/LeetCode/" kind="src" path=""/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk18"/>
 	<classpathentry kind="lib" path="javalang/Collections/CollectionsCode"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
