@@ -33,8 +33,7 @@ public class TinfoContentController {
 	private TinfoContentService tinfoContentService;
 	
 	private final Logger LOGGER = LoggerFactory.getLogger(  TinfoContentController.class );
-	
-	
+
 	@GetMapping("/tinfocontent")
 	public List<TinfoContent> fetchTinfoContent( ) {
 		
@@ -49,6 +48,7 @@ public class TinfoContentController {
 	@GetMapping("/tinfocontent/{id}")
 	public TinfoContent fetchTinfoContentByContentId( @PathVariable("id") Long contentId) throws TinfoContentNotFoundException {
 		LOGGER.info("In fetchTinfoContentByContentId");
+
 		return tinfoContentService.fetchTinfoContentByContentId( contentId);
 	}
 	

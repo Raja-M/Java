@@ -31,8 +31,8 @@ class MyThread4 extends Thread{
         Table.printTable(1000);
     }
 }
-public class TestSynchronization4{
-    public static void main(String t[]){
+public class SynchronizedStatic{
+    public static void main(String args[]){
         MyThread1 t1=new MyThread1();
         MyThread2 t2=new MyThread2();
         MyThread3 t3=new MyThread3();
