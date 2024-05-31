@@ -1,3 +1,4 @@
+/*
 Object:
 Encapsulation :  
 	Hiding internal state and requiring all interaction to be performed through an object’s method’s is knows as data encapsulation.
@@ -208,3 +209,4 @@ or you can simple call without types also as simple method call
 obj.compare(p1,p2)  // p1,p2 data types will be determined based on how these objects are created.
  
 This feature, known as type inference.
+*/
