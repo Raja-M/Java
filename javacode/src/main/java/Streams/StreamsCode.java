@@ -23,6 +23,9 @@ public class StreamsCode {
 
         System.out.println( " Emp List : " + empList);
 
+        Stream<Employee> empStream = empList.stream();
+
+
         empList.stream().forEach( e -> System.out.println(e));
 
         List<Integer> depts = empList.stream().map( Employee::getDept).distinct().collect(Collectors.toList());

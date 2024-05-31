@@ -1,4 +1,4 @@
-			Connection con = DriverManager.getConnection("jdbc:teradata://udwdev/LOGMECH=LDAP", sUser, sPassword);
+		/*	Connection con = DriverManager.getConnection("jdbc:teradata://udwdev/LOGMECH=LDAP", sUser, sPassword);
 			
 			statement stmt = con.createStatement();
 			//PreparedStatement
@@ -24,3 +24,5 @@
 			getString
 			getInt
 getFloat
+
+		 */
