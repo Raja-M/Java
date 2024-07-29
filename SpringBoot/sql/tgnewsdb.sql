@@ -1,12 +1,12 @@
 use tgnews;
-
+/*
 CREATE TABLE `tgncategory_sequence` (
   `next_val` bigint DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+*/
+-- CREATE SEQUENCE tgncategory_sequence START WITH 1 INCREMENT BY 1;
 
-CREATE SEQUENCE tgncategory_sequence START WITH 1 INCREMENT BY 1;
-
-select next value  from tgncategory_sequence
+-- select next value  from tgncategory_sequence
 
 CREATE TABLE `tgncategory` (
   `categoryid` bigint NOT NULL,
@@ -19,12 +19,12 @@ CREATE TABLE `tgncategory` (
 
 insert into tgncategory values ( 1, 1 , 'news', current_time() ) ;
 
-
+/*
 CREATE TABLE `tgnuser_sequence` (
   `next_val` bigint DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-
+*/
 
 CREATE TABLE `tgnuser` (
   `userid` bigint NOT NULL,
@@ -75,11 +75,11 @@ insert into tgncontent values ( 1, 'content body', 'karimnagar', CURRENT_TIME(),
 1, 'A', 'content title', CURRENT_TIME(), 1, 1 );
 
 commit ;
-
+/*
 CREATE TABLE `tgncontent_sequence` (
   `next_val` bigint DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
+*/
 CREATE TABLE `tgncontentcategorymap` (
   `contentid` bigint NOT NULL,
   `categoryid` bigint NOT NULL,
