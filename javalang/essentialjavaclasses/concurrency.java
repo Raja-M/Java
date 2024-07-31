@@ -24,7 +24,7 @@ Thread
 notifyAll()
 
 */
-public class SimpleThreads {
+class SimpleThreads {
 
     // Display a message, preceded by
     // the name of the current thread
@@ -139,7 +139,7 @@ public class SimpleThreads {
 *************
 **************
 */
-public class SleepMessages {
+ class SleepMessages {
     public static void main(String args[])
         throws InterruptedException {
         String importantInfo[] = {
@@ -159,7 +159,7 @@ public class SleepMessages {
         }
     }
 }
-
+/*
 UDW_CUST_PLN_ID:int64 {quote=none, null_field=''};
 BUS_EFF_DT:date {null_field=''};
 BUS_EXPIR_DT:date {null_field=''};
@@ -186,7 +186,7 @@ writeRecord(0);
 
 /***************
 *****************
-*****************/
+*****************
 
 import java.util.Random;
 
@@ -219,7 +219,7 @@ public class Producer implements Runnable {
 }
 
 
-/****/
+/****
 
 public class ProducerConsumerExample {
     public static void main(String[] args) {
@@ -229,7 +229,7 @@ public class ProducerConsumerExample {
     }
 }
 
-/*******************/
+/*******************
 public class Drop {
     // Message sent from producer
     // to consumer.
@@ -274,7 +274,7 @@ public class Drop {
     }
 }
 
-/*******************************/
+/*******************************
 
 import java.util.Random;
 
@@ -297,3 +297,4 @@ public class Consumer implements Runnable {
         }
     }
 }
+*/

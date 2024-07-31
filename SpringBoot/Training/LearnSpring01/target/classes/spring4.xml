@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd" default-lazy-init ="true">
+               
+     <context:annotation-config/>
+   
+      <context:component-scan base-package="com.h2kinfosys.spring2"/>
+ <bean id="testpostprocessor" class="com.h2kinfosys.spring2.TestBeanProcessor"/>
+  <bean id="parentTest" abstract="true">
+	  <property name ="name" value="sony"/>
+	  <property name="address" value="TX"/>
+  </bean>
+  
+    <bean id="testheritance" parent ="parentTest"	class="com.h2kinfosys.spring2.TestHeritance">
+    <property name ="id" value ="Test100"></property>
+  </bean>
+  
+  </beans>

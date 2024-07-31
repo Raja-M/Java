@@ -134,13 +134,13 @@ Files.walkFileTree(startingDir, opts, Integer.MAX_VALUE, finder);
 
 
  * 
- */
+ *
 
 
 /**
  * @author rmudiga
  *
- */
+ *
 import static java.nio.file.StandardOpenOption.*;
 
 import java.nio.ByteBuffer;
@@ -213,8 +213,8 @@ public static void main(String args[]){
 /**
  * @author rmudiga
  *
- */
-import static java.nio.file.StandardOpenOption.*;
+
+import static java.nio.file.StandardOpenOption;
 
 import java.nio.ByteBuffer;
 import java.nio.channels.*;
@@ -226,7 +226,7 @@ public class DirTest {
 
 	/**
 	 * @param args
-	 */
+	 *
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Iterable<Path> dirs = FileSystems.getDefault().getRootDirectories();
@@ -257,7 +257,7 @@ public class DirTest {
 /**
  * @author rmudiga
  *
- */
+ *
 import static java.nio.file.StandardOpenOption.*;
 
 import java.nio.ByteBuffer;
@@ -270,7 +270,7 @@ public class LogFileTest {
 
 	/**
 	 * @param args
-	 */
+	 *
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
@@ -307,7 +307,7 @@ public class LogFileTest {
 /**
  * 
 
- **/
+ *
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.DosFileAttributes;
@@ -320,11 +320,11 @@ import java.io.*;
 /**
  * @author rmudiga
  * 
- */
+ *
 public class PathTest {
 	/**
 	 * 
-	 */
+	 *
 	public PathTest() {
 		// TODO Auto-generated constructor stub
 		System.out.println("test");
@@ -332,7 +332,7 @@ public class PathTest {
 
 	/**
 	 * @param args
-	 */
+	 *
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Path file = Paths.get("C:\\Work\\javatest.txt");
@@ -405,3 +405,4 @@ public class PathTest {
 	}
 
 }
+*/
