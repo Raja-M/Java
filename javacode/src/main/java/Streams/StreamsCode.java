@@ -23,10 +23,13 @@ public class StreamsCode {
 
         System.out.println( " Emp List : " + empList);
 
+        Stream<Employee> empStream = empList.stream();
+
+
         empList.stream().forEach( e -> System.out.println(e));
 
         List<Integer> depts = empList.stream().map( Employee::getDept).distinct().collect(Collectors.toList());
-        System.out.println(depts);
+        System.out.println("Depts : " + depts);
 
         Map<Integer, Integer>   deptsal =  empList.stream()
                 .collect(Collectors.groupingBy( e -> e.getDept(), Collectors.summingInt(e -> e.getSalary())));
@@ -37,9 +40,7 @@ public class StreamsCode {
 
         Map< Character, Long> charCount = str.chars().mapToObj( c -> (char) c ).collect(Collectors.groupingBy( c -> c , Collectors.counting())  );
 
-        System.out.println( "Department salary : " + charCount);
-
-
+        System.out.println( "Character Count : " + charCount);
 
         // Stream<Integer> stream = empList.parallelStream();
         // Integer[] evenNumbersArr = stream.filter(i -> i%2 == 0).toArray(Integer[]::new);

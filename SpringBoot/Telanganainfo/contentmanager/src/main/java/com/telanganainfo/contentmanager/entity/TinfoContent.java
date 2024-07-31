@@ -1,4 +1,4 @@
-package com.telanganainfo.contentmanager.entity;
+package com.tgnews.tgnews.entity;
 
 import java.util.ArrayList;
 import java.util.List;
