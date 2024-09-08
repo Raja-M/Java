@@ -1,4 +1,14 @@
+create user developer IDENTIFIED WITH mysql_native_password BY 'DataBase#001';
+
+create database tgnews;
+
 use tgnews;
+
+GRANT ALL ON `tgnews`.* TO 'developer' WITH GRANT OPTION;
+
+FLUSH PRIVILEGES;
+
+
 /*
 CREATE TABLE `tgncategory_sequence` (
   `next_val` bigint DEFAULT NULL

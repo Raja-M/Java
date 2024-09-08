@@ -13,8 +13,7 @@ import org.springframework.stereotype.Repository;
 public interface TgnContentRepository  extends JpaRepository<TgnContent, Long>{
 	
 	public TgnContent findByContenttitle(String contentTitle);
-	
-	public TgnContent findByContenttitleIgnoreCase(String contentTitle);
+		public TgnContent findByContenttitleIgnoreCase(String contentTitle);
 	
 	public Page<TgnContent> findByContenttitleContaining(String contentTitle, Pageable pageable);
 

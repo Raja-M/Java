@@ -42,6 +42,7 @@ public class StreamsCode {
 
         System.out.println( "Character Count : " + charCount);
 
+
         // Stream<Integer> stream = empList.parallelStream();
         // Integer[] evenNumbersArr = stream.filter(i -> i%2 == 0).toArray(Integer[]::new);
 

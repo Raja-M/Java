@@ -15,7 +15,7 @@ public class ContentManagerController {
 	@Autowired
 	private TgnContentService tgnContentService;
 
-	@GetMapping("/")
+	@GetMapping("/content")
 	public List<TgnContent> content(){
 
 		List<TgnContent> tc = tgnContentService.fetchTgnContentList();

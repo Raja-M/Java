@@ -11,9 +11,9 @@ spring:
     name: TGNews
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/tgnews
-    username: root #developer
-    password: admin #Database#1 #root@admin
+    url: jdbc:mysql://astrony.com:3306/tgnews
+    username: developer #developer
+    password: DataBase#001 #Database#1 #root@admin
   jpa:
     hibernate.ddl-auto: update
     generate-ddl: true
