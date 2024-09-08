@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+	/*		Connection con = DriverManager.getConnection("jdbc:teradata://udwdev/LOGMECH=LDAP", sUser, sPassword);
+=======
 		/*	Connection con = DriverManager.getConnection("jdbc:teradata://udwdev/LOGMECH=LDAP", sUser, sPassword);
+>>>>>>> cb3866775a23308bae8fd52663ae4e0bbc2db8fe
 			
 			statement stmt = con.createStatement();
 			//PreparedStatement
@@ -25,4 +29,9 @@
 			getInt
 getFloat
 
+<<<<<<< HEAD
+
+	 */
+=======
 		 */
+>>>>>>> cb3866775a23308bae8fd52663ae4e0bbc2db8fe

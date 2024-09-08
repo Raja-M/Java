@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" default-init-method ="start">
+
+  <bean id="greet" class="com.h2kinfosys.spring.Greetings" destroy-method="destroy" lazy-init= "true">
+	  <constructor-arg index ="0" value="English"/>
+	  <constructor-arg index ="1" value="TX"/>
+    
+  </bean>
+    <bean id="emp" class="com.h2kinfosys.spring.Employee" destroy-method="destroy" >
+    <property name="empId" value ="100"></property>
+    <property name="empName" value ="sony"></property>
+  </bean>
+   
+   <bean id="mng" class="com.h2kinfosys.spring.Manager" ></bean>
+   
+   <bean id="msword" class="com.h2kinfosys.spring.MSWord" >
+	   <property name="version" value ="200"></property>
+	    <property name="spellCheker" ref ="spellchecky"></property>
+   </bean>
+   
+   <bean id="spellchecky" class="com.h2kinfosys.spring.SpellChecker" >
+	   <property name="language" ref ="English"></property>
+   </bean>
+   
+   
+   
+</beans>
