@@ -1,0 +1,38 @@
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  application:
+    name: TGNews
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://astrony.com:3306/tgnews
+    username: developer #developer
+    password: DataBase#001 #Database#1 #root@admin
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        exclude: "env,beans"
+
+logging:
+  level:
+    ROOT: WARN
+
+welcome:
+  message: ${WEL_MESSAGE:TGNews Service started}
+
+---
