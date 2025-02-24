@@ -10,7 +10,8 @@ spring:
   application:
     name: TGNews
   datasource:
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.cj.jdbc.Driver
+
     url: jdbc:mysql://astrony.com:3306/tgnews
     username: developer #developer
     password: DataBase#001 #Database#1 #root@admin

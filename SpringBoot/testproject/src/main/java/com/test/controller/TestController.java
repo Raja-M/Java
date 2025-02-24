@@ -29,11 +29,11 @@ public class TestController {
 	@GetMapping("/contentid")
 	public TgnContent contentById(@RequestParam(name = "id") long reqContentId)throws Exception{
 
-		//TgnContent tc = new TgnContent();
+		TgnContent tc = new TgnContent();
 		//tc.setContentid(reqContentId);
 		//tc.setContenttitle("title1");
 	//	tc.setContentbody("newsbody");
-		
+
 		return tc;
 
 
