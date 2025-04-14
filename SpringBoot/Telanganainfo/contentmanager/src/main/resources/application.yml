@@ -41,7 +41,7 @@ spring:
     activate:
       on-profile: dev
   application:
-    name: Telanganainfo    
+    name: Telanganainfo
   datasource:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/telanganainfo

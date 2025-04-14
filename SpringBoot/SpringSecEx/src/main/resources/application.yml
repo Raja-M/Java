@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: local
+
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+  application:
+    name: SpringSecEx
+  security:
+    user:
+      name: user1
+      password: pwd1

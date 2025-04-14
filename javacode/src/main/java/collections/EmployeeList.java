@@ -21,6 +21,10 @@ public class EmployeeList {
         employeeList.add(e4);
         employeeList.add(e5);
         employeeList.add(e6);
+        employeeList.add(e2);
+        employeeList.add(e5);
+        
+        employeeList.size();
 
     }
 

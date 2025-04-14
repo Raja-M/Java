@@ -50,6 +50,7 @@ public class  TinfoContent {
 			generator = "tinfocontent_sequence"
 			)
 	private Long contentid;
+
 	@NotBlank(message="Content Title cant be blank")
 	private String contenttitle;
 	
