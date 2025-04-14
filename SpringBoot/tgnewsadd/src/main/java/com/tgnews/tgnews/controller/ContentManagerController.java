@@ -15,6 +15,27 @@ public class ContentManagerController {
 	@Autowired
 	private TgnContentService tgnContentService;
 
+	@GetMapping("/content")
+	//public ResponseEntity<TgnContent> getContent(){
+	public List<TgnContent> getContent(){
+		//System.out.println(tgnContent);
+		List<TgnContent> tcList = tgnContentService.fetchTgnContentList();
+
+		return tcList;
+
+	}
+	
+	@GetMapping("/contentid")
+	public TgnContent getContentByID(@RequestParam(name = "id") long reqContentId)throws Exception{
+
+		TgnContent tc = tgnContentService.fetchTgnContentByContentId(reqContentId);
+		return tc;
+
+	}
+
+
+
+
 	@PostMapping("/contentadd")
 	//public ResponseEntity<TgnContent> postContent(@RequestBody TgnContent tgnContent){
 	   public TgnContent postContent(@RequestBody TgnContent tgnContent){

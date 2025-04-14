@@ -45,25 +45,25 @@ public class TgnContentServiceImpl implements TgnContentService {
 	}
 	
 	@Override
-	public TgnContent updateTgnCotent(Long contentId, TgnContent TgnContent) {
+	public TgnContent updateTgnCotent(Long contentId, TgnContent inTgnContent) {
 		// TODO Auto-generated method stub		
 		
 		TgnContent tgnContent = tgnContentRepository.findById(  contentId).get();
 		
 		System.out.println( " tgnContent.id :" + tgnContent.getContentid() );
-		if(Objects.nonNull( TgnContent.getContentid() )&& 
-			 (TgnContent.getContentid() > 0 )) {
-			tgnContent.setContentid( TgnContent.getContentid());
+		if(Objects.nonNull( inTgnContent.getContentid() )&&
+			 (inTgnContent.getContentid() > 0 )) {
+			tgnContent.setContentid( inTgnContent.getContentid());
 		}
 		
-		if(Objects.nonNull( TgnContent.getContenttitle() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContenttitle()  )) {
-				tgnContent.setContenttitle( TgnContent.getContenttitle());
+		if(Objects.nonNull( inTgnContent.getContenttitle() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContenttitle()  )) {
+				tgnContent.setContenttitle( inTgnContent.getContenttitle());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentbody() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContentbody()  )) {
-				tgnContent.setContentbody( TgnContent.getContentbody());
+		if(Objects.nonNull( inTgnContent.getContentbody() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContentbody()  )) {
+				tgnContent.setContentbody( inTgnContent.getContentbody());
 			}
 		/*
 		if(Objects.nonNull( TgnContent.getContenteditorid() )&& 
@@ -76,36 +76,36 @@ public class TgnContentServiceImpl implements TgnContentService {
 				tgnContent.setContentapproverid( TgnContent.getContentapproverid());
 			}
 		*/
-		tgnContent.setContentcreatetime( TgnContent.getContentcreatetime());
+		tgnContent.setContentcreatetime( inTgnContent.getContentcreatetime());
 		
-		if(Objects.nonNull( TgnContent.getContentupdatetime() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContentupdatetime()  )) {
-				tgnContent.setContentupdatetime( TgnContent.getContentupdatetime());
+		if(Objects.nonNull( inTgnContent.getContentupdatetime() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContentupdatetime()  )) {
+				tgnContent.setContentupdatetime( inTgnContent.getContentupdatetime());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentstatus() )&& 
-				 (  TgnContent.getContentstatus() != '\0' )) {
-				tgnContent.setContentstatus( TgnContent.getContentstatus());
+		if(Objects.nonNull( inTgnContent.getContentstatus() )&&
+				 (  inTgnContent.getContentstatus() != '\0' )) {
+				tgnContent.setContentstatus( inTgnContent.getContentstatus());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentcity() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContentcity()  )) {
-				tgnContent.setContentcity( TgnContent.getContentcity());
+		if(Objects.nonNull( inTgnContent.getContentcity() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContentcity()  )) {
+				tgnContent.setContentcity( inTgnContent.getContentcity());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentmandal() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContentmandal()  )) {
-				tgnContent.setContentmandal( TgnContent.getContentmandal());
+		if(Objects.nonNull( inTgnContent.getContentmandal() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContentmandal()  )) {
+				tgnContent.setContentmandal( inTgnContent.getContentmandal());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentplaceid() )&& 
-				(TgnContent.getContentplaceid() > 0 )) {
-				tgnContent.setContentplaceid( TgnContent.getContentplaceid());
+		if(Objects.nonNull( inTgnContent.getContentplaceid() )&&
+				(inTgnContent.getContentplaceid() > 0 )) {
+				tgnContent.setContentplaceid( inTgnContent.getContentplaceid());
 			}
 		
-		if(Objects.nonNull( TgnContent.getContentpicurl() )&& 
-				!"".equalsIgnoreCase( TgnContent.getContentpicurl()  )) {
-				tgnContent.setContentpicurl( TgnContent.getContentpicurl());
+		if(Objects.nonNull( inTgnContent.getContentpicurl() )&&
+				!"".equalsIgnoreCase( inTgnContent.getContentpicurl()  )) {
+				tgnContent.setContentpicurl( inTgnContent.getContentpicurl());
 			}
 		
 		return  tgnContentRepository.save(tgnContent);

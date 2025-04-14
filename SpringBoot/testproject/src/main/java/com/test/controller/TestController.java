@@ -27,11 +27,20 @@ public class TestController {
 		return empList;
 	}
 
+<<<<<<< HEAD
 	@GetMapping("/getEmployees")
 	public List<Employee> getEmployees(){
 		List<Employee> empList = testService.getEmployees();
 		return empList;
 	}
+=======
+		TgnContent tc = new TgnContent();
+		//tc.setContentid(reqContentId);
+		//tc.setContenttitle("title1");
+	//	tc.setContentbody("newsbody");
+
+		return tc;
+>>>>>>> 9362922116c23ab81be4a9e84830b096b079a31b
 
 	@GetMapping("/getEmployeeByName")
 	public Employee getEmployeesByName( @RequestParam (name = "name") String empName){

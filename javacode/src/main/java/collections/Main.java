@@ -1,5 +1,7 @@
 package collections;
 
+import Streams.EmployeeSalary;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +22,8 @@ public class Main {
         List<Card> deck = Card.getStandardDeck();
 
         Card.printDeck( deck);
+        EmployeeSalary empsal = new EmployeeSalary();
+        empsal.getEmpSalary();
 
     }
 }
