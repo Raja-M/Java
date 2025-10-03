@@ -1,4 +1,4 @@
-package javacode.src.main.java.core;
+package core;
 
 public class TestClass {
 }

@@ -1,2 +1,11 @@
-package PACKAGE_NAME;public class Interview {
+public class Interview {
+
+    //write a main method
+    public static void main(String[] args) {
+        // Your code here
+        System.out.println("Hello, World!");
+
+
+    }
+
 }

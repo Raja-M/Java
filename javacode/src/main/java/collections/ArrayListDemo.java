@@ -7,7 +7,7 @@ import java.util.List;
 public class ArrayListDemo {
     public static void main (String[] args){
 
-        Emp e = new Emp( "test", 1000);
+ 
 
         System.out.println("ArrayList Demo..");
 

@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class EmpList {
@@ -14,8 +13,8 @@ public class EmpList {
     }
     public static  void getEmployeeList(){
 
-        Employee emp1 = new Employee("Raja",9000,1);
-        Employee emp2 = new Employee("Sony",6000,2);
+ 
+
         Employee emp3 = new Employee("Laddu",7000,3);
 
         List<Employee> empList = new ArrayList<Employee>( Arrays.asList(
