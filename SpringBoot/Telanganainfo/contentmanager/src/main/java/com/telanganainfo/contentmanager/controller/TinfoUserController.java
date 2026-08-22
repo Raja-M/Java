@@ -21,7 +21,7 @@ public class TinfoUserController {
 	@Autowired
 	private TinfoUserService tinfouserservice;
 	
-	@GetMapping("/tinfouser")
+	@GetMapping("tinfouser")
 	public List<TinfoUser> getTinfoUser( ) {
 		
 		return tinfouserservice.fetchTinfoUserList( ); 

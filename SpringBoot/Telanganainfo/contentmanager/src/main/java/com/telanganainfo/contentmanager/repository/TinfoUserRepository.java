@@ -34,6 +34,10 @@ public interface TinfoUserRepository extends JpaRepository<TinfoUser, Long>{
 			nativeQuery = true
 			)
 //	public List<TinfoUser> getByTinfoUserEmailNative(String mailid);
+
+	public List<TinfoUser> findAll(){
+		return "select *  from tinfouser "
+	}
 	public List<TinfoUser> getByTinfoUserEmailNative( name @Param("emailid") String mailid);
 	
 	

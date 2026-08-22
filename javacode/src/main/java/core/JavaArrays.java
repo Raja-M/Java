@@ -33,8 +33,31 @@ public class JavaArrays {
 
         System.out.println( "String.valueof : " + String.valueOf(chArrayInit) );
 
+        int digits1[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        int digits2[] = new int[]{ 9,9,9 };
+
+        System.out.println( " digits1 : " + Arrays.toString(digits1) );
+        System.out.println( " digits2 : " + Arrays.toString(digits2) );
+
+        int[] result = plusOne(digits1);
+        System.out.println( " result 1 : " + Arrays.toString(result) );
+        int[] result2 = plusOne(digits2);
+        System.out.println( " result 2 : " + Arrays.toString(result2) );
 
 
+    }
 
+    public static int[]  plusOne(int[] digits) {
+        int n = digits.length;
+        for (int i = n - 1; i >= 0; i--) {
+            if (digits[i] < 9) {
+                digits[i]++;
+                return digits;
+            }
+            digits[i] = 0;
+        }
+        int[] newNumber = new int[n + 1];
+        newNumber[0] = 1;
+        return newNumber;
     }
 }
