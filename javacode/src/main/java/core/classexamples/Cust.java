@@ -10,9 +10,8 @@ public class Cust {
     private String custType;
 
     private List<CustAddr> custAddrList;
-
     public Cust() {
-
+        
     }
 
     public Cust(Long custID, String custName, String custType, List<CustAddr> custAddrList) {
